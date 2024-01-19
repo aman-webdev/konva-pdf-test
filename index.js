@@ -26,17 +26,18 @@ const main = () => {
 
     layer.add(background)
 
-    const textLato = new Konva.Text({x:842/2,y:595/2,fontFamily:"Lato",text:"John Doe", fontSize:30,verticalAlign:"middle"})
+    const textLato = new Konva.Text({x:842/2,y:595/2,fontFamily:"Lato",text:"John Doe", fontSize:30})
     layer.add(textLato)
 
     const textArial = new Konva.Text({x:200,y:0,fontFamily:"Arial",text:"John Doe", fontSize:30})
+    layer.add(textArial)
 
     stage.add(layer)
 
     layer.draw()
 
     
-  const img = stage.toDataURL({ pixelRatio: 1 });
+  const img = stage.toDataURL({ pixelRatio: 3 });
   const imageBuffer = Buffer.from(
     img.replace(/^data:image\/\w+;base64,/, ""),
     "base64"
